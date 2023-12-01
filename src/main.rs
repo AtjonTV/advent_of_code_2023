@@ -18,7 +18,7 @@ pub trait Challenge {
 }
 
 fn main() -> io::Result<()> {
-    let available_challenges: Vec<Box<dyn Challenge>> = vec![];
+    let available_challenges: Vec<Box<dyn Challenge>> = vec![boxed(Day01::new())];
 
     let matches = Command::new(env!("CARGO_PKG_NAME"))
         .version(env!("CARGO_PKG_VERSION"))
